@@ -1,0 +1,143 @@
+{
+  "version": 1,
+  "author": "Joamerson Islan Santos Amaral",
+  "editor": "wokwi",
+  "parts": [
+    {
+      "type": "wokwi-breadboard-mini",
+      "id": "bb1",
+      "top": 486.8,
+      "left": -162,
+      "rotate": 180,
+      "attrs": {}
+    },
+    {
+      "type": "board-pi-pico-w",
+      "id": "pico1",
+      "top": 347.05,
+      "left": -106.45,
+      "rotate": 270,
+      "attrs": { "builder": "pico-sdk" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r5",
+      "top": 531.4,
+      "left": -183.25,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led5",
+      "top": 558.4,
+      "left": -168.6,
+      "rotate": 180,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r6",
+      "top": 531.4,
+      "left": -154.45,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r7",
+      "top": 531.4,
+      "left": -125.65,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "r8",
+      "top": 531.4,
+      "left": -87.25,
+      "rotate": 270,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 558.4,
+      "left": -139.8,
+      "rotate": 180,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": 558.4,
+      "left": -111,
+      "rotate": 180,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led3",
+      "top": 558.4,
+      "left": -72.6,
+      "rotate": 180,
+      "attrs": { "color": "limegreen" }
+    },
+    {
+      "type": "wokwi-buzzer",
+      "id": "bz1",
+      "top": 604.8,
+      "left": -48,
+      "rotate": 180,
+      "attrs": { "volume": "0.1" }
+    },
+    {
+      "type": "wokwi-pushbutton-6mm",
+      "id": "btn2",
+      "top": 500.2,
+      "left": -53.6,
+      "rotate": 90,
+      "attrs": { "color": "green" }
+    }
+  ],
+  "connections": [
+    [ "led5:C", "bb1:15t.e", "green", [ "v0" ] ],
+    [ "led1:C", "bb1:12t.e", "green", [ "v0" ] ],
+    [ "bb1:15t.a", "bb1:12t.a", "green", [ "v0" ] ],
+    [ "bb1:12t.a", "bb1:10t.a", "green", [ "v0" ] ],
+    [ "r8:2", "pico1:GP8", "green", [ "h0" ] ],
+    [ "bb1:6t.a", "bb1:10t.a", "green", [ "v0" ] ],
+    [ "bz1:1", "bb1:6t.a", "green", [ "v0" ] ],
+    [ "bz1:2", "pico1:GP12", "green", [ "v0" ] ],
+    [ "btn2:1.l", "pico1:GP10", "green", [ "v0" ] ],
+    [ "pico1:GP0", "bb1:17b.j", "green", [ "v0" ] ],
+    [ "pico1:GP2", "bb1:14b.j", "green", [ "v19.2" ] ],
+    [ "r5:1", "bb1:17t.e", "", [ "$bb" ] ],
+    [ "r5:2", "bb1:17b.i", "", [ "$bb" ] ],
+    [ "led5:A", "bb1:17t.e", "", [ "$bb" ] ],
+    [ "led5:C", "bb1:16t.e", "", [ "$bb" ] ],
+    [ "r6:1", "bb1:14t.e", "", [ "$bb" ] ],
+    [ "r6:2", "bb1:14b.i", "", [ "$bb" ] ],
+    [ "r7:1", "bb1:11t.e", "", [ "$bb" ] ],
+    [ "r7:2", "bb1:11b.i", "", [ "$bb" ] ],
+    [ "r8:1", "bb1:7t.e", "", [ "$bb" ] ],
+    [ "r8:2", "bb1:7b.i", "", [ "$bb" ] ],
+    [ "led1:A", "bb1:14t.e", "", [ "$bb" ] ],
+    [ "led1:C", "bb1:13t.e", "", [ "$bb" ] ],
+    [ "led2:A", "bb1:11t.e", "", [ "$bb" ] ],
+    [ "led2:C", "bb1:10t.e", "", [ "$bb" ] ],
+    [ "led3:A", "bb1:7t.e", "", [ "$bb" ] ],
+    [ "led3:C", "bb1:6t.e", "", [ "$bb" ] ],
+    [ "bz1:1", "bb1:1t.a", "", [ "$bb" ] ],
+    [ "bz1:2", "bb1:2t.a", "", [ "$bb" ] ],
+    [ "btn2:1.l", "bb1:4b.j", "", [ "$bb" ] ],
+    [ "btn2:2.l", "bb1:6b.j", "", [ "$bb" ] ],
+    [ "btn2:1.r", "bb1:4b.g", "", [ "$bb" ] ],
+    [ "btn2:2.r", "bb1:6b.g", "", [ "$bb" ] ],
+    [ "pico1:GP5", "bb1:11b.j", "green", [ "v0" ] ],
+    [ "led2:C", "bb1:10b.f", "green", [ "v0" ] ],
+    [ "bb1:10b.j", "pico1:GND.2", "green", [ "v0" ] ],
+    [ "bb1:6b.f", "led3:C", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
