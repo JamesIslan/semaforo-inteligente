@@ -9,3 +9,4 @@ Este projeto é parte da capacitação realizada pelo projeto EmbarcaTech, em pa
     - Adicionalmente, foi incluso um sinal sonoro para auxiliar pedestres com deficiências visuais
 
 ## Imagens
+![Screenshot](./screenshot_projeto.png)
